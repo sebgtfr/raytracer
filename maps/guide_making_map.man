@@ -1,0 +1,49 @@
+Guide to create map :
+
+I) Initialisation of eyes
+
+Flag's name, here is "#EYES"
+Position [x] [y] [z]
+Rotation [x] [y] [z]
+
+ex :
+
+#EYES
+-100 0 0
+0 0 0
+
+II) Initialisation of spot
+
+Flag's name, here is "#SPOT"
+Position [x] [y] [z]
+Color [Decimal or Hexadecimal number. if hexa : don't forgot "0x" before number]
+
+ex :
+
+#SPOT
+-150 0 100
+16777215
+
+OU
+
+#SPOT
+-150 0 100
+0xFFFFFF
+
+III) Initialisation of object
+
+Flag's name : "#PLANE" or "#SPHERE" or "#CYLINDER" or "#CONE" or "#PARA" or "#HYPER" or "#DISK"
+Position [x] [y] [z]
+Rotation [x] [y] [z]
+Param of object [nb > 0]
+Limit [min] [max]
+Color [color1] [color2]
+shine [0 <= shine <= 1] // (shine > 1 = 1) and (shine < 0 = 0)
+*reflection [0 <= reflection <= 1] // (reflection > 1 = 1) and (reflection < 0 = 0)
+**refraction [0 <= refraction <= 1] // (refraction > 1 = 1) and (refraction < 0 = 0)
+***Procedural texture [0 = TRUE | other = FALSE]
+
+
+*reflection is mirror effect
+**refraction is transparency effect
+***Procedural texture is Damier for plane. nothing for other object.
